@@ -1,0 +1,220 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1 , shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Load the latest version of TensorFlow.js -->
+    <!--<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <link href="styles.css" rel = "stylesheet">
+    <title>Object Detection</title>
+  </head>
+
+
+  <body>
+
+    <nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
+      <div class="container"> 
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+        <a class="navbar-brand mr-auto" href="./index.html"><img src="img/logo.png" height="30" width="41" class="d-inline-block align-top"></a>
+        <div class="collapse navbar-collapse" id="Navbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link active" href="./index.html"><span class="fa fa-home"></span> Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-info fa-lg"></span> About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Other Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contact.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+        </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <header class="jumbotron">
+      <div class="container">
+        <div class="row row-header">
+          <div class="col-12 col-sm-6">
+              <h1> Object Detection </h1>
+              <p>I am delighted that you came across this project and wanted to know how I implemented this project. Let's begin! </p>
+          </div>
+        </div>
+        
+      </div>
+    </header>
+
+
+    <div class="container">
+
+      <div class="row">
+        <ol class="col-12 breadcrumb">
+            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="./about.html">About</a></li>
+        </ol>
+        <!--<div class="col-12">
+           <h3>How I started!</h3>
+           <hr>
+        </div>-->
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="col-12">
+            <h3>How I started this!</h3>
+            <hr>
+            </div>
+    </div>
+
+    <div class="container">
+        <div class="row-content">
+            <p>I don't remember the exact date but it was 2019 that I got hooked up to machine learning badly and I wanted to learn new things so that I could look cool among my homies.
+                I came up with a fascinating idea of creating a web based AI project but I knew very little about frameworks back then. I was born with a curse that I can't sleep if I fail at something or if I leave something not completed.
+                Google was developing some very nice ways of implementing tensorflow in web based applications and they designed the very fundamentals that I used in this project.
+            </p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="col-12">
+            <h3>Technologies Used</h3>
+            <hr>
+            </div>
+    </div>
+
+    <div class="container">
+        <div class="row-content">
+            <p>The main set of technologies that I have used in this project are:</p>
+                
+
+                
+                <!--<div class="col-6 col-sm-6">
+                    <br><p>1) Bootstrap 4</p>
+                    <br><p>2) Tensorflow</p>
+                    <br><p>3) TensorflowJS</p>
+                </div>-->
+
+                
+                <img src="img/bootstrap.png" width="200px" height="auto">
+                <img src="img/tfjs.png" width="300px" height="auto">
+                
+                
+                
+            
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-12">
+            <h3>Explanation of what's happening!</h3>
+            <hr>
+            </div>
+    </div>
+
+    <div class="container">
+        <div class="row-content">
+            <p>
+                We are using transfer learning in this project by using the MobileNet model from TensorflowJS library and this model is choosen as the heavier the model gets the more the time it takes to load the model and also the performance is also a big factor which favors small yet okayish models like MobileNet.
+                <br>
+                In JavaScript file we are taking a async function that waits for a promise using the await keyword.These special keywords are important and if you are not aware of these please watch the JS video by Akshay Saini on Youtube.
+                <br>
+                So basically we are loading the model and this model is then fed some images which are captured real time using the webcam of the user. Now to convert this image to a tensor we'll have to use a data API from TensorFlowJS and now this tensor can be fed to the model which will inturn classify it as a particular object.
+                <br>
+                Now you must be thinking that I have not preprocessed the image well actually this data API that we are using it handles all the things on it's own and that is a disadvantage of this project because you'll see that not always it performs absolutely the way it is desired.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="col-12">
+            <h3>Improvements</h3>
+            <hr>
+            </div>
+    </div>
+
+    <div class="container">
+        <div class="row-content">
+            <p>
+                I would love to include some preprocessing on the captured image before it's fed to the model.
+                <br>
+                The model although is light needs to perform better as we have cases where it fails to identify and gives very less probability.
+                <br>
+                The image captured by the webcams are mostly very noisy so a noise removing filter is important to improve results. 
+            </p>
+        </div>
+    </div>
+    
+    
+    
+
+    <br>
+
+
+    
+
+
+
+
+    <footer class="footer">
+      <div class="container">
+          <div class="row">             
+              <div class="col-4 offset-1 col-sm-2">
+                  <h5>Links</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="./index.html">Home</a></li>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Other Projects</a></li>
+                      <li><a href="./contact.html">Contact</a></li>
+                  </ul>
+              </div>
+              <div class="col-7 col-sm-5">
+                  <h5>Our Address</h5>
+                  <address>
+                Hostel 3, PB Road<br>
+                Belur Industrial Area, Dharwad<br>
+                (Karnataka)India<br>
+                Tel.: +91 800 ### 2031<br>
+                Email: <a href="ytripathi.10.98@gmail.com">Yagyesh Tripathi</a>
+             </address>
+              </div>
+              <div class="col-12 col-sm-4 align-self-center">
+                  <div class="text-center">
+                      <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
+                      <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+                      <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+                      <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+                      <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+                      <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
+                  </div>
+              </div>
+         </div>
+         <div class="row justify-content-center">             
+              <div class="col-auto">
+                  <p>Designed by Yagyesh Tripathi</p>
+              </div>
+         </div>
+      </div>
+  </footer>
+    
+    
+    <script src="index.js"></script>
+  </body>
+</html>
